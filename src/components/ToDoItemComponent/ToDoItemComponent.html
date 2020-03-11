@@ -1,0 +1,16 @@
+<template>
+  <require from="./ToDoItemComponent.scss"></require>
+  <p>
+    <input 
+      type="checkbox" 
+      checked.bind="todo.done" 
+      id="${todo.description}"
+      >
+    <label 
+      class="${todo.done ? 'striked' : ''}"
+      for="${todo.description}"
+      >
+      ${todo.description}
+    </label>
+  </p>
+</template>

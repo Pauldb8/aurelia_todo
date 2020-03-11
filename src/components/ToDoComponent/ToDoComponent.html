@@ -1,0 +1,14 @@
+<template>
+  <require from="../ToDoItemComponent/ToDoItemComponent"></require>
+  <require from="./ToDoComponent.scss"></require>
+  <h2>ToDoComponent</h2>
+
+  <form submit.trigger="addTodo()">
+    <input type="text" value.bind="todoDescription">
+    <button type="submit" disabled.bind="!todoDescription">Add Todo</button>
+  </form>
+
+  <ul>
+    <to-do-item-component repeat.for="todo of todos" todo.bind="todo"></to-do-item-component>
+  </ul>
+</template>
